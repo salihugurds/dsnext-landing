@@ -22,7 +22,7 @@ const ContactCTA: React.FC = () => {
           <Button
             href="/contact"
             size="lg"
-            className="bg-white text-purple-700 hover:text-white hover:bg-blue-50"
+            className="bg-white text-purple-700 hover:text-white hover:bg-purple-600"
           >
             Get in Touch
           </Button>

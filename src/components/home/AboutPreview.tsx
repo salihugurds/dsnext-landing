@@ -10,11 +10,19 @@ interface AboutPreviewProps {
 // Default data in case Supabase data hasn't loaded yet
 const defaultData: AboutSectionType = {
   id: "1",
-  title: "About TechSphere",
+  title: "About DSNext",
   description: `
-    Founded in 2015, TechSphere has grown from a small team of dedicated developers to a comprehensive IT solutions provider with global reach. We believe technology should empower businesses, not complicate them.
-    
-    Our mission is to deliver innovative, scalable technology solutions that help our clients succeed in an increasingly digital world. We combine technical expertise with industry knowledge to create customized solutions that address real business challenges.
+    20 Aralık 2024 tarihi, DSNext Teknoloji ve Danışmanlık A.Ş.'nin kurulduğu tarihtir ve bu tarih, sadece bir başlangıcın değil, aynı zamanda büyük bir vizyonun da ilk adımıdır. Teknopark Kuluçka Merkezi'nde yer alarak, teknolojinin en ileri noktalarını keşfetmek ve en kaliteli hizmeti sunmak için yola çıktık.
+
+Amacımız, yazılım dünyasının en karmaşık projelerini, sade, kaliteli ve işlevsel çözümlerle buluşturmak. Anahtar teslim projelerde ve çalışan kiralama hizmetlerinde, müşterilerimizin her bir ihtiyaçlarına en üst düzeyde çözüm sağlamak için gece gündüz çalışıyoruz.
+
+Bizim için her şeyin temelinde kalite ve basitlik yer alır. Çünkü karmaşıklığı basitleştirmek, gerçek yazılım mühendisliğinin gücüdür. Her bir satır kod, sadece bir çözüm değil, aynı zamanda kullanıcı dostu bir deneyim yaratmak için yazılır.
+
+Ancak, yalnızca müşterilerimize değil, aynı zamanda çalışma arkadaşlarımıza da değer veriyoruz. DSNext ailesi olarak, her bir çalışanımızın potansiyelini en üst düzeye çıkarmak için destekleyici ve zorlayıcı bir ortam sunuyoruz. Birlikte büyüyor, birbirimizin gücünden ilham alıyoruz. Çünkü inanıyoruz ki, en iyi sonuçlar yalnızca bir ekip olarak birlikte hareket ettiğimizde ortaya çıkar.
+
+Geleceğin teknolojilerini inşa etmek ve her bir projemizde bir adım daha ileri gitmek için DSNext, her zaman bir adım önde olmaya devam edecek.
+
+DSNext Teknoloji ve Danışmanlık A.Ş. | Birlikte Daha Güçlüyüz.
   `,
   image:
     "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",

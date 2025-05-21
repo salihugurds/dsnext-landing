@@ -8,7 +8,6 @@ import Contact from "./pages/Contact";
 import IndustriesPage from "./pages/industries";
 import IndustryDetailPage from "./pages/industries/[slug]";
 import People from "./pages/People";
-
 function App() {
   return (
     <SupabaseProvider>
