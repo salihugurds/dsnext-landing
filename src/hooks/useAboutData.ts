@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
-import { supabase } from '../lib/supabaseClient';
-import { Company, Leadership, Customer } from '../types/supabase';
+import { useState, useEffect } from "react";
+import { supabase } from "../utils/supabase";
 
 export const useCompany = () => {
-  const [company, setCompany] = useState<Company | null>(null);
+  const [company, setCompany] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
@@ -11,8 +10,8 @@ export const useCompany = () => {
     const fetchCompany = async () => {
       try {
         const { data, error: fetchError } = await supabase
-          .from('company')
-          .select('*')
+          .from("company")
+          .select("*")
           .single();
 
         if (fetchError) throw fetchError;
@@ -31,7 +30,7 @@ export const useCompany = () => {
 };
 
 export const useLeadership = () => {
-  const [leadership, setLeadership] = useState<Leadership[]>([]);
+  const [leadership, setLeadership] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
@@ -39,9 +38,9 @@ export const useLeadership = () => {
     const fetchLeadership = async () => {
       try {
         const { data, error: fetchError } = await supabase
-          .from('leadership')
-          .select('*')
-          .order('order', { ascending: true });
+          .from("leadership")
+          .select("*")
+          .order("order", { ascending: true });
 
         if (fetchError) throw fetchError;
         setLeadership(data || []);
@@ -59,21 +58,21 @@ export const useLeadership = () => {
 };
 
 export const useCustomers = (featuredOnly = false) => {
-  const [customers, setCustomers] = useState<Customer[]>([]);
+  const [customers, setCustomers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        let query = supabase.from('customers').select('*');
-        
+        let query = supabase.from("clients").select("*");
+
         if (featuredOnly) {
-          query = query.eq('featured', true);
+          query = query.eq("featured", true);
         }
-        
-        query = query.order('order', { ascending: true });
-        
+
+        query = query.order("order", { ascending: true });
+
         const { data, error: fetchError } = await query;
 
         if (fetchError) throw fetchError;
@@ -92,7 +91,7 @@ export const useCustomers = (featuredOnly = false) => {
 };
 
 export const useLeadershipMember = (id: string) => {
-  const [member, setMember] = useState<Leadership | null>(null);
+  const [member, setMember] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
@@ -100,9 +99,9 @@ export const useLeadershipMember = (id: string) => {
     const fetchMember = async () => {
       try {
         const { data, error: fetchError } = await supabase
-          .from('leadership')
-          .select('*')
-          .eq('id', id)
+          .from("leadership")
+          .select("*")
+          .eq("id", id)
           .single();
 
         if (fetchError) throw fetchError;

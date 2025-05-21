@@ -8,7 +8,8 @@ export type Json =
 
 // Define types for each table
 export type HeroSection = Database["public"]["Tables"]["hero_sections"]["Row"];
-export type ExpertiseCard = Database["public"]["Tables"]["expertise_cards"]["Row"];
+export type ExpertiseCard =
+  Database["public"]["Tables"]["expertise_cards"]["Row"];
 export type TeamMember = Database["public"]["Tables"]["team_members"]["Row"];
 export type Industry = Database["public"]["Tables"]["industries"]["Row"];
 export type Company = Database["public"]["Tables"]["company"]["Row"];
@@ -54,7 +55,7 @@ export interface Database {
           updated_at?: string;
         };
       };
-      
+
       // Leadership
       leadership: {
         Row: {
@@ -180,6 +181,15 @@ export interface Database {
           sort_order: number | null;
           created_at: string;
           updated_at: string;
+          hero_title: string | null;
+          hero_subtitle: string | null;
+          hero_image_url: string | null;
+          projects?: {
+            title: string;
+            description: string;
+            image_url: string;
+            category: string;
+          }[];
         };
         Insert: {
           id?: string;
@@ -190,6 +200,15 @@ export interface Database {
           sort_order?: number | null;
           created_at?: string;
           updated_at?: string;
+          hero_title?: string | null;
+          hero_subtitle?: string | null;
+          hero_image_url?: string | null;
+          projects?: {
+            title: string;
+            description: string;
+            image_url: string;
+            category: string;
+          }[];
         };
         Update: {
           id?: string;
@@ -200,6 +219,15 @@ export interface Database {
           sort_order?: number | null;
           created_at?: string;
           updated_at?: string;
+          hero_title?: string | null;
+          hero_subtitle?: string | null;
+          hero_image_url?: string | null;
+          projects?: {
+            title: string;
+            description: string;
+            image_url: string;
+            category: string;
+          }[];
         };
       };
 

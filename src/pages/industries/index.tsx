@@ -66,21 +66,27 @@ const IndustriesPage: React.FC = () => {
   }
 
   return (
-    <Section className="py-16">
-      <div className="max-w-4xl mx-auto text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Industries We Serve</h1>
-        <p className="text-xl text-gray-600">
-          Discover how our solutions are transforming businesses across various
-          industries
-        </p>
+    <div>
+      <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white pt-32 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl font-bold mb-4">Industries We Serve</h1>
+            <p className="text-xl text-blue-100">
+              Discover how our solutions are transforming businesses across
+              various industries.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {industries.map((industry) => (
-          <IndustryCard key={industry.id} industry={industry} />
-        ))}
-      </div>
-    </Section>
+      <Section spacing="lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {industries.map((industry) => (
+            <IndustryCard key={industry.id} industry={industry} />
+          ))}
+        </div>
+      </Section>
+    </div>
   );
 };
 

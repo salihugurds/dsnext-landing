@@ -167,22 +167,23 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
                 <span className="text-gray-400">
-                  123 Tech Avenue, Suite 456
+                  FENERBAHÇE MAH. HACI MEHMETEFENDİ SK. DALYAN SİTESİ B NO: 24/2
+                  İÇ KAPI NO: 3
                   <br />
-                  San Francisco, CA 94107
+                  KADIKÖY - İSTANBUL
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-400 mr-2" />
-                <span className="text-gray-400">(123) 456-7890</span>
+                <span className="text-gray-400">+90 555 555 55 55</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-2" />
                 <a
-                  href="mailto:info@techsphere.com"
+                  href="mailto:info@dsnext.com"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  info@techsphere.com
+                  info@dsnext.com
                 </a>
               </li>
             </ul>

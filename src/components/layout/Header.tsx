@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "../../assets/dsnextlogo-nobg.png";
+import { useIndustryList } from "../../hooks/useIndustries";
+import { useExpertiseCards } from "../../hooks/useSupabaseData";
 
 interface NavLink {
   text: string;
@@ -12,46 +14,75 @@ interface NavLink {
   }>;
 }
 
-const navLinks: NavLink[] = [
-  { text: "Home", href: "/" },
-  {
-    text: "Our Expertise",
-    href: "/expertise",
-    dropdown: [
-      { text: "Mobile Development", href: "/expertise/mobile" },
-      { text: "Web Development", href: "/expertise/web" },
-      { text: "Data Management", href: "/expertise/data" },
-    ],
-  },
-  {
-    text: "Industries",
-    href: "/industries",
-    dropdown: [
-      { text: "Fintech", href: "/industries/fintech" },
-      { text: "Healthcare", href: "/industries/healthcare" },
-      { text: "Retail", href: "/industries/retail" },
-    ],
-  },
-  { text: "Our People", href: "/people" },
-  {
-    text: "About Us",
-    href: "/about",
-    dropdown: [
-      { text: "Company", href: "/about/company" },
-      { text: "Leadership", href: "/about/leadership" },
-      { text: "Our Clients", href: "/about/clients" },
-    ],
-  },
-  { text: "Contact Us", href: "/contact" },
-];
-
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [navLinks, setNavLinks] = useState<NavLink[]>([
+    { text: "Home", href: "/" },
+    {
+      text: "Our Expertise",
+      href: "/expertise",
+      dropdown: [
+        { text: "Mobile Development", href: "/expertise/mobile" },
+        { text: "Web Development", href: "/expertise/web" },
+        { text: "Data Management", href: "/expertise/data" },
+      ],
+    },
+    {
+      text: "Industries",
+      href: "/industries",
+      dropdown: [
+        { text: "Fintech", href: "/industries/fintech" },
+        { text: "Healthcare", href: "/industries/healthcare" },
+        { text: "Retail", href: "/industries/retail" },
+      ],
+    },
+    { text: "Our People", href: "/people" },
+    {
+      text: "About Us",
+      href: "/about",
+    },
+    { text: "Contact Us", href: "/contact" },
+  ]);
+  const { industries } = useIndustryList();
+  const { expertise } = useExpertiseCards();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const [dropdownTimer, setDropdownTimer] = useState<NodeJS.Timeout | null>(
     null
   );
+
+  useEffect(() => {
+    if (industries) {
+      const newNavLinks = navLinks.map((link) => {
+        if (link.text === "Industries") {
+          return {
+            ...link,
+            dropdown: industries.map((industry) => ({
+              text: industry.title,
+              href: `/industries/${industry.slug}`,
+            })),
+          };
+        }
+        return link;
+      });
+      setNavLinks(newNavLinks);
+    }
+    if (expertise) {
+      const newNavLinks = navLinks.map((link) => {
+        if (link.text === "Our Expertise") {
+          return {
+            ...link,
+            dropdown: expertise.map((expertise) => ({
+              text: expertise.title,
+              href: `/expertise/${expertise.slug}`,
+            })),
+          };
+        }
+        return link;
+      });
+      setNavLinks(newNavLinks);
+    }
+  }, [industries, navLinks, expertise]);
 
   useEffect(() => {
     const handleScroll = () => {

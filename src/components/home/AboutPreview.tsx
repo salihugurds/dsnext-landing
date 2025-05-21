@@ -12,17 +12,13 @@ const defaultData: AboutSectionType = {
   id: "1",
   title: "About DSNext",
   description: `
-    20 Aralık 2024 tarihi, DSNext Teknoloji ve Danışmanlık A.Ş.'nin kurulduğu tarihtir ve bu tarih, sadece bir başlangıcın değil, aynı zamanda büyük bir vizyonun da ilk adımıdır. Teknopark Kuluçka Merkezi'nde yer alarak, teknolojinin en ileri noktalarını keşfetmek ve en kaliteli hizmeti sunmak için yola çıktık.
+    Founded on December 20, 2024, DSNext Teknoloji ve Danışmanlık A.Ş. is built on the vision of turning complex software challenges into smart, high-quality solutions. Based in the Technopark Incubation Center, we specialize in turnkey projects and IT staff augmentation, delivering tailored services that prioritize clarity, performance, and user experience.
 
-Amacımız, yazılım dünyasının en karmaşık projelerini, sade, kaliteli ve işlevsel çözümlerle buluşturmak. Anahtar teslim projelerde ve çalışan kiralama hizmetlerinde, müşterilerimizin her bir ihtiyaçlarına en üst düzeyde çözüm sağlamak için gece gündüz çalışıyoruz.
+At DSNext, we believe true engineering lies in simplifying complexity. Every line of code we write aims to create not just solutions, but experiences.
 
-Bizim için her şeyin temelinde kalite ve basitlik yer alır. Çünkü karmaşıklığı basitleştirmek, gerçek yazılım mühendisliğinin gücüdür. Her bir satır kod, sadece bir çözüm değil, aynı zamanda kullanıcı dostu bir deneyim yaratmak için yazılır.
+More than a tech company, we’re a team — growing together, pushing limits, and staying one step ahead to shape the technologies of tomorrow.
 
-Ancak, yalnızca müşterilerimize değil, aynı zamanda çalışma arkadaşlarımıza da değer veriyoruz. DSNext ailesi olarak, her bir çalışanımızın potansiyelini en üst düzeye çıkarmak için destekleyici ve zorlayıcı bir ortam sunuyoruz. Birlikte büyüyor, birbirimizin gücünden ilham alıyoruz. Çünkü inanıyoruz ki, en iyi sonuçlar yalnızca bir ekip olarak birlikte hareket ettiğimizde ortaya çıkar.
-
-Geleceğin teknolojilerini inşa etmek ve her bir projemizde bir adım daha ileri gitmek için DSNext, her zaman bir adım önde olmaya devam edecek.
-
-DSNext Teknoloji ve Danışmanlık A.Ş. | Birlikte Daha Güçlüyüz.
+DSNext | Stronger Together.
   `,
   image:
     "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -53,12 +49,12 @@ const AboutPreview: React.FC<AboutPreviewProps> = ({ data = defaultData }) => {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/about/company">Our Company</Button>
-            <Button href="/about/leadership" variant="outline">
-              Leadership Team
+            <Button href="/about/#company">Our Company</Button>
+            <Button href="/people" variant="outline">
+              Our Team
             </Button>
-            <Button href="/about/clients" variant="ghost">
-              Client Success Stories
+            <Button href="/about/#clients" variant="ghost">
+              Our Clients
             </Button>
           </div>
         </div>
