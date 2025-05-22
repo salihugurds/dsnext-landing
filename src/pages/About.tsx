@@ -104,45 +104,47 @@ export default function About() {
       <TeamSection />
 
       {/* Clients Section */}
-      <Section id="clients" className="py-16 bg-gray-100">
-        <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Clients
-            </h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
-          </div>
+      {customers?.length > 0 && (
+        <Section id="clients" className="py-16 bg-gray-100">
+          <Container>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Our Clients
+              </h2>
+              <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
 
-          {customersLoading ? (
-            <div className="flex justify-center py-12">
-              <LoadingSpinner size="lg" />
-            </div>
-          ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {customers.map((client: Client) => (
-                <div
-                  key={client.id}
-                  onClick={() => handleCardClick("client", client.id)}
-                  className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center cursor-pointer transition-all hover:shadow-lg"
-                >
-                  {client.logo_url && (
-                    <div className="mb-4 flex items-center justify-center">
-                      <img
-                        src={client.logo_url}
-                        alt={client.name}
-                        className="max-h-full max-w-full object-cover rounded-lg"
-                      />
-                    </div>
-                  )}
-                  <h3 className="text-lg font-medium text-gray-900 text-center">
-                    {client.name}
-                  </h3>
-                </div>
-              ))}
-            </div>
-          )}
-        </Container>
-      </Section>
+            {customersLoading ? (
+              <div className="flex justify-center py-12">
+                <LoadingSpinner size="lg" />
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                {customers.map((client: Client) => (
+                  <div
+                    key={client.id}
+                    onClick={() => handleCardClick("client", client.id)}
+                    className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center cursor-pointer transition-all hover:shadow-lg"
+                  >
+                    {client.logo_url && (
+                      <div className="mb-4 flex items-center justify-center">
+                        <img
+                          src={client.logo_url}
+                          alt={client.name}
+                          className="max-h-full max-w-full object-cover rounded-lg"
+                        />
+                      </div>
+                    )}
+                    <h3 className="text-lg font-medium text-gray-900 text-center">
+                      {client.name}
+                    </h3>
+                  </div>
+                ))}
+              </div>
+            )}
+          </Container>
+        </Section>
+      )}
     </div>
   );
 }

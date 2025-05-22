@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">TechSphere</h3>
+            <h3 className="text-xl font-bold mb-4">DSNext Technology</h3>
             <p className="text-gray-400 mb-4">
               Innovative IT solutions for businesses of all sizes. We help
               transform your digital presence with cutting-edge technology.

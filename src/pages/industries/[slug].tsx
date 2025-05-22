@@ -5,9 +5,6 @@ import Section from "../../components/shared/Section";
 import {
   ArrowLeftIcon,
   LightBulbIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  CheckCircleIcon,
   ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
@@ -23,15 +20,6 @@ interface CaseStudy {
   client?: string;
   impact?: string;
 }
-
-// Animated variants
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-};
-const stagger = {
-  visible: { transition: { staggerChildren: 0.15 } },
-};
 
 const IndustryDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -122,7 +110,7 @@ const IndustryDetailPage: React.FC = () => {
       </div>
 
       {/* Stats / Features Section */}
-      <Section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+      {/* <Section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
         <motion.div
           className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8"
           variants={stagger}
@@ -156,7 +144,7 @@ const IndustryDetailPage: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-      </Section>
+      </Section> */}
 
       {/* Overview Section */}
       <Section className="py-20">

@@ -1,59 +1,9 @@
 import React from "react";
 import Section from "../components/shared/Section";
-import { TeamMember } from "../types";
-
-const defaultTeamMembers: TeamMember[] = [
-  {
-    id: "1",
-    name: "Sarah Johnson",
-    position: "Chief Technology Officer",
-    bio: "With over 15 years of experience in software development and IT leadership, Sarah leads our technical strategy and innovation.",
-    image:
-      "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: "2",
-    name: "Michael Chen",
-    position: "Lead Software Architect",
-    bio: "Michael specializes in designing scalable, resilient software architectures and has led projects for Fortune 500 companies.",
-    image:
-      "https://images.pexels.com/photos/5668770/pexels-photo-5668770.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: "3",
-    name: "Aisha Patel",
-    position: "Director of Product",
-    bio: "Aisha brings extensive experience in product management and user experience design to create solutions that truly delight users.",
-    image:
-      "https://images.pexels.com/photos/5668893/pexels-photo-5668893.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: "4",
-    name: "David Rodriguez",
-    position: "Senior Mobile Developer",
-    bio: "David is an expert in mobile app development with a passion for creating intuitive and performant applications.",
-    image:
-      "https://images.pexels.com/photos/5668788/pexels-photo-5668788.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: "5",
-    name: "Emily Zhang",
-    position: "UX Design Lead",
-    bio: "Emily combines creativity with data-driven insights to design user experiences that exceed expectations.",
-    image:
-      "https://images.pexels.com/photos/5668895/pexels-photo-5668895.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: "6",
-    name: "James Wilson",
-    position: "Data Science Manager",
-    bio: "James leads our data science initiatives, helping clients unlock the power of their data through advanced analytics.",
-    image:
-      "https://images.pexels.com/photos/5668779/pexels-photo-5668779.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-];
+import { useTeamMembers } from "../hooks/useSupabaseData";
 
 const People: React.FC = () => {
+  const { team } = useTeamMembers();
   return (
     <div>
       {/* Hero Section */}
@@ -73,14 +23,14 @@ const People: React.FC = () => {
       {/* Team Grid */}
       <Section spacing="lg">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {defaultTeamMembers.map((member) => (
+          {team.map((member) => (
             <div
               key={member.id}
               className="bg-white rounded-lg shadow-sm overflow-hidden"
             >
               <div className="aspect-w-3 aspect-h-2">
                 <img
-                  src={member.image}
+                  src={member.image || ""}
                   alt={member.name}
                   className="w-full h-full object-cover"
                 />
