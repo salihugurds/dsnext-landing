@@ -53,7 +53,7 @@ const HeroSection: React.FC = () => {
         </Button>
         <Button
           onClick={() => {
-            console.log("clicked");
+            console.log("clickeda");
             if (window.ReactNativeWebView) {
               window.ReactNativeWebView.postMessage("Hello from web!");
             } else {
