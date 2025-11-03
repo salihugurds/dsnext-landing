@@ -13,6 +13,7 @@ import LeadershipDetail from "./pages/about/LeadershipDetail";
 import ClientDetail from "./pages/about/ClientDetail";
 import ScrollToHandler from "./utils/ScrollToHandler";
 import ExpertiseDetailPage from "./pages/expertise/[slug]";
+import { Button } from "./components/shared";
 function App() {
   return (
     <SupabaseProvider>
@@ -20,6 +21,7 @@ function App() {
         <ScrollToHandler />
         <div className="flex flex-col min-h-screen">
           <Header />
+
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />

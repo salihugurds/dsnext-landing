@@ -41,7 +41,28 @@ const HeroSection: React.FC = () => {
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
           {hero.subtitle}
         </p>
-        <Button href={hero.cta_link} variant="primary" size="lg">
+        <Button
+          href={hero.cta_link}
+          onClick={() => {
+            console.log("aaaa");
+          }}
+          variant="primary"
+          size="lg"
+        >
+          {hero.cta_text}
+        </Button>
+        <Button
+          onClick={() => {
+            console.log("clicked");
+            if (window.ReactNativeWebView) {
+              window.ReactNativeWebView.postMessage("Hello from web!");
+            } else {
+              console.log("Not running inside React Native WebView");
+            }
+          }}
+          variant="primary"
+          size="lg"
+        >
           {hero.cta_text}
         </Button>
       </div>

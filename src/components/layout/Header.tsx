@@ -82,7 +82,7 @@ const Header: React.FC = () => {
       });
       setNavLinks(newNavLinks);
     }
-  }, [industries, navLinks, expertise]);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
