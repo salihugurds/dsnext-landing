@@ -283,7 +283,7 @@ const IndustryDetailPage: React.FC = () => {
         )}
 
       {/* Team/Experts Section */}
-      <TeamSection />
+      {/* <TeamSection /> */}
 
       {/* CTA Section */}
       <ContactCTA />

@@ -100,8 +100,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership Section */}
-      <TeamSection />
+      {/* Leadership Section
+      <TeamSection /> */}
 
       {/* Clients Section */}
       {customers?.length > 0 && (

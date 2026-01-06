@@ -29,11 +29,11 @@ const People: React.FC = () => {
               className="bg-white rounded-lg shadow-sm overflow-hidden"
             >
               <div className="aspect-w-3 aspect-h-2">
-                <img
+                {/* <img
                   src={member.image || ""}
                   alt={member.name}
                   className="w-full h-full object-cover"
-                />
+                /> */}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{member.name}</h3>
