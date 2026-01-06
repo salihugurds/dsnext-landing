@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
         >
           {hero.cta_text}
         </Button>
-        <Button
+        {/* <Button
           onClick={() => {
             console.log("clickeda");
             if (window.ReactNativeWebView) {
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
           size="lg"
         >
           {hero.cta_text}
-        </Button>
+        </Button> */}
       </div>
 
       {/* Scroll indicator */}
