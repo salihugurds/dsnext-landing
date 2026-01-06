@@ -154,7 +154,7 @@ export const useIndustryCards = () => {
 };
 
 export const useTeamMembers = () => {
-  const [team, setTeam] = useState<TeamMember[]>(defaultTeamMembers);
+  const [team, setTeam] = useState<TeamMember[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
   const { getTeamMembers } = useSupabase();
