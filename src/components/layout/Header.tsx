@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "../../assets/dsnextlogo-nobg.png";
+import logoLight from "../../assets/dsnext-light.png";
 import { useIndustryList } from "../../hooks/useIndustries";
 import { useExpertiseCards } from "../../hooks/useSupabaseData";
 
@@ -135,8 +136,12 @@ const Header: React.FC = () => {
             }`}
             onClick={() => setIsOpen(false)}
           >
-            <img src={logo} alt="Logo" width={150} height={100} />
-          </Link>
+     <img
+          src={isScrolled || isOpen ? logo : logoLight}
+          alt="Logo"
+          width={150}
+          height={100}
+        />  </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
