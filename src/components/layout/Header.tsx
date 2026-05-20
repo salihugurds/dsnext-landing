@@ -42,6 +42,8 @@ const Header: React.FC = () => {
       text: "About Us",
       href: "/about",
     },
+    { text: "Blog", href: "/blog" },
+    { text: "Bulletin", href: "/bulletin" },
     { text: "Contact Us", href: "/contact" },
   ]);
   const { industries } = useIndustryList();

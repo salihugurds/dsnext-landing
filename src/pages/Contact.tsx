@@ -339,12 +339,17 @@ const Contact: React.FC = () => {
           <h2 className="text-2xl font-bold">Find Us</h2>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden h-96">
-          {/* Placeholder for map - in a real implementation, this would use Google Maps or a similar service */}
-          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-            <p className="text-gray-500">Map would be displayed here</p>
-          </div>
-        </div>
+     <div className="bg-white rounded-lg shadow-sm overflow-hidden h-96">
+  <iframe
+    title="DSNEXT Office Location"
+    src="https://www.google.com/maps?q=Fenerbahçe%20Mahallesi%20Hacı%20Mehmet%20Efendi%20Sokak%20Dalyan%20Sitesi%20Kadıköy%20İstanbul&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
       </Section>
     </div>
   );

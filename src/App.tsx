@@ -14,6 +14,9 @@ import ClientDetail from "./pages/about/ClientDetail";
 import ScrollToHandler from "./utils/ScrollToHandler";
 import ExpertiseDetailPage from "./pages/expertise/[slug]";
 import { Button } from "./components/shared";
+import BlogPage from "./pages/blog";
+import BlogDetailPage from "./pages/blog/[slug]";
+import BulletinPage from "./pages/bulletin";
 function App() {
   return (
     <SupabaseProvider>
@@ -30,6 +33,9 @@ function App() {
                 path="/expertise/:slug"
                 element={<ExpertiseDetailPage />}
               />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<BlogDetailPage />} />
+              <Route path="/bulletin" element={<BulletinPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/industries" element={<IndustriesPage />} />
               <Route
@@ -43,6 +49,7 @@ function App() {
                 element={<LeadershipDetail />}
               />
               <Route path="/about/client/:id" element={<ClientDetail />} />
+
             </Routes>
           </main>
           <Footer />
