@@ -44,6 +44,7 @@ const Header: React.FC = () => {
     },
     { text: "Blog", href: "/blog" },
     { text: "Bulletin", href: "/bulletin" },
+    { text: "Community", href: "/community" },
     { text: "Contact Us", href: "/contact" },
   ]);
   const { industries } = useIndustryList();
@@ -129,7 +130,7 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link
             to="/"

@@ -14,6 +14,8 @@ import ClientDetail from "./pages/about/ClientDetail";
 import ScrollToHandler from "./utils/ScrollToHandler";
 import ExpertiseDetailPage from "./pages/expertise/[slug]";
 import { Button } from "./components/shared";
+import CommunityPage from "./pages/community";
+import IssueOnePage from "./pages/community/IssueOnePage";
 import BlogPage from "./pages/blog";
 import BlogDetailPage from "./pages/blog/[slug]";
 import BulletinPage from "./pages/bulletin";
@@ -49,6 +51,8 @@ function App() {
                 element={<LeadershipDetail />}
               />
               <Route path="/about/client/:id" element={<ClientDetail />} />
+              <Route path="/community" element={<CommunityPage />} />
+              <Route path="/community/issue-01" element={<IssueOnePage />} />
 
             </Routes>
           </main>
