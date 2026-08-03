@@ -16,6 +16,7 @@ import ExpertiseDetailPage from "./pages/expertise/[slug]";
 import { Button } from "./components/shared";
 import CommunityPage from "./pages/community";
 import IssueOnePage from "./pages/community/IssueOnePage";
+import IssueTwoPage from "./pages/community/IssueTwoPage";
 import BlogPage from "./pages/blog";
 import BlogDetailPage from "./pages/blog/[slug]";
 import BulletinPage from "./pages/bulletin";
@@ -53,6 +54,7 @@ function App() {
               <Route path="/about/client/:id" element={<ClientDetail />} />
               <Route path="/community" element={<CommunityPage />} />
               <Route path="/community/issue-01" element={<IssueOnePage />} />
+              <Route path="/community/issue-02" element={<IssueTwoPage />} />
 
             </Routes>
           </main>

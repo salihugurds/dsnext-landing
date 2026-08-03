@@ -122,38 +122,105 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
-  <div className="mt-14">
-  <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 grid md:grid-cols-[1fr_1.2fr]">
-    <div className="relative min-h-[260px]">
+{/* Community Issues */}
+<div className="mt-14 space-y-10">
+  {/* Issue 02 */}
+  <div className="grid overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl md:grid-cols-[1fr_1.2fr]">
+    <div className="relative min-h-[280px]">
       <img
-        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-        alt="DSNEXT Community Issue 01"
-        className="absolute inset-0 w-full h-full object-cover"
+        src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1400&auto=format&fit=crop"
+        alt="DSNEXT Community Issue 02"
+        className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-purple-900/60" />
-      <div className="relative z-10 p-8 text-white h-full flex flex-col justify-end">
-        <span className="inline-block w-fit px-4 py-1 rounded-full bg-white/20 text-sm font-semibold mb-4">
-          Latest Community Bulletin
+
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-blue-950/70 to-purple-900/50" />
+
+      <div className="relative z-10 flex min-h-[280px] flex-col justify-end p-8 text-white">
+        <span className="mb-4 inline-block w-fit rounded-full bg-cyan-400 px-4 py-1 text-sm font-bold text-slate-950">
+          Latest Issue
         </span>
-        <h2 className="text-3xl font-bold">Issue 01</h2>
-        <p className="text-blue-100 mt-2">Culture, Technology & Inspiration</p>
+
+        <h2 className="text-4xl font-black">Issue 02</h2>
+
+        <p className="mt-2 text-cyan-100">
+          Cybersecurity, Technology & Community
+        </p>
+
+        <p className="mt-4 text-sm font-semibold text-white/80">
+          July 2026
+        </p>
       </div>
     </div>
 
-    <div className="p-8 md:p-10 flex flex-col justify-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <div className="flex flex-col justify-center p-8 md:p-10">
+      <span className="text-sm font-bold uppercase tracking-widest text-blue-700">
+        DSNEXT Community Bulletin
+      </span>
+
+      <h2 className="mt-4 text-3xl font-black text-gray-900 md:text-4xl">
+        Explore the July 2026 edition
+      </h2>
+
+      <p className="mt-5 text-lg leading-8 text-gray-600">
+        Read about the Ankara NATO Summit, Türkiye’s VNL victory,
+        cybersecurity developments, AI-powered threats, learning
+        recommendations, and July’s entertainment highlights.
+      </p>
+
+      <Link
+        to="/community/issue-02"
+        className="mt-8 inline-flex w-fit items-center justify-center rounded-xl bg-blue-700 px-7 py-4 font-bold text-white shadow-lg transition-colors hover:bg-blue-800"
+      >
+        Read Issue 02 →
+      </Link>
+    </div>
+  </div>
+
+  {/* Issue 01 */}
+  <div className="grid overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl md:grid-cols-[1fr_1.2fr]">
+    <div className="relative min-h-[280px]">
+      <img
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+        alt="DSNEXT Community Issue 01"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-purple-900/60" />
+
+      <div className="relative z-10 flex min-h-[280px] flex-col justify-end p-8 text-white">
+        <span className="mb-4 inline-block w-fit rounded-full bg-white/20 px-4 py-1 text-sm font-semibold">
+          Previous Issue
+        </span>
+
+        <h2 className="text-4xl font-black">Issue 01</h2>
+
+        <p className="mt-2 text-blue-100">
+          Culture, Technology & Inspiration
+        </p>
+
+        <p className="mt-4 text-sm font-semibold text-white/80">
+          June 2026
+        </p>
+      </div>
+    </div>
+
+    <div className="flex flex-col justify-center p-8 md:p-10">
+      <span className="text-sm font-bold uppercase tracking-widest text-purple-700">
+        DSNEXT Community Bulletin
+      </span>
+
+      <h2 className="mt-4 text-3xl font-black text-gray-900 md:text-4xl">
         Read the first DSNEXT Community issue
       </h2>
 
-      <p className="text-gray-600 text-lg leading-8 mb-8">
+      <p className="mt-5 text-lg leading-8 text-gray-600">
         Explore monthly highlights, AI trends, learning recommendations,
-        entertainment picks and community inspiration in a colorful magazine-style
-        issue.
+        entertainment picks, and community inspiration in our first edition.
       </p>
 
       <Link
         to="/community/issue-01"
-        className="inline-flex w-fit items-center justify-center px-7 py-4 rounded-xl bg-purple-700 text-white font-bold hover:bg-purple-800 transition-colors shadow-lg"
+        className="mt-8 inline-flex w-fit items-center justify-center rounded-xl bg-purple-700 px-7 py-4 font-bold text-white shadow-lg transition-colors hover:bg-purple-800"
       >
         Read Issue 01 →
       </Link>
