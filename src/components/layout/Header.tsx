@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "../../assets/dsnextlogo-nobg.png";
-import logoLight from "../../assets/dsnext-light.png";
+import logoLight from "../../assets/dsnext-light-header.png";
 import { useIndustryList } from "../../hooks/useIndustries";
 import { useExpertiseCards } from "../../hooks/useSupabaseData";
 
@@ -130,21 +130,19 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link
-            to="/"
-            className={`text-2xl font-bold ${
-              isScrolled || isOpen ? "text-blue-600" : "text-blue-600"
-            }`}
-            onClick={() => setIsOpen(false)}
-          >
-     <img
-          src={isScrolled || isOpen ? logo : logoLight}
-          alt="Logo"
-          width={150}
-          height={100}
-        />  </Link>
+<Link
+  to="/"
+  className="flex items-center flex-shrink-0"
+  onClick={() => setIsOpen(false)}
+>
+  <img
+    src={isScrolled || isOpen ? logo : logoLight}
+    alt="DSNext Technology"
+    className="w-[185px] h-auto object-contain"
+  />
+</Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">

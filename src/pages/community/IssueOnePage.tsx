@@ -28,7 +28,7 @@ const IssueOnePage: React.FC = () => {
               </span>
 
               <h1 className="text-6xl md:text-8xl font-black leading-none mb-5">
-                Issue 01
+               June 2026
               </h1>
 
               <p className="text-3xl md:text-4xl text-yellow-300 font-semibold italic mb-8">

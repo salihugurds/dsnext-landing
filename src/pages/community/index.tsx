@@ -124,6 +124,58 @@ const CommunityPage: React.FC = () => {
           </div>
 {/* Community Issues */}
 <div className="mt-14 space-y-10">
+  {/* Issue 03 */}
+<div className="grid overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl md:grid-cols-[1fr_1.2fr]">
+  <div className="relative min-h-[280px]">
+    <img
+      src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop"
+      alt="DSNEXT Community Issue 03"
+      className="absolute inset-0 h-full w-full object-cover"
+    />
+
+    <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-indigo-950/75 to-purple-900/55" />
+
+    <div className="relative z-10 flex min-h-[280px] flex-col justify-end p-8 text-white">
+<span className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-cyan-300 px-4 py-1.5 text-xs font-black uppercase tracking-wider text-slate-950 shadow-md">
+  <span className="h-2 w-2 rounded-full bg-green-500" />
+  Latest Issue
+</span>
+
+      <h2 className="text-4xl font-black">Issue 03</h2>
+
+      <p className="mt-2 text-cyan-100">
+        AI Agents, Zero Trust & Cybersecurity
+      </p>
+
+      <p className="mt-4 text-sm font-semibold text-white/80">
+        August 2026
+      </p>
+    </div>
+  </div>
+
+  <div className="flex flex-col justify-center p-8 md:p-10">
+    <span className="text-sm font-bold uppercase tracking-widest text-indigo-700">
+      DSNEXT Community Bulletin
+    </span>
+
+    <h2 className="mt-4 text-3xl font-black text-gray-900 md:text-4xl">
+      Explore the August 2026 edition
+    </h2>
+
+    <p className="mt-5 text-lg leading-8 text-gray-600">
+      Explore AI agents, Zero Trust, cybersecurity, AI infrastructure,
+      agent identity, governance, practical security guidance, and this
+      month’s learning recommendations.
+    </p>
+
+    <Link
+      to="/community/issue-03"
+      className="mt-8 inline-flex w-fit items-center justify-center rounded-xl bg-indigo-700 px-7 py-4 font-bold text-white shadow-lg transition-colors hover:bg-indigo-800"
+    >
+      Read Issue 03 →
+    </Link>
+  </div>
+</div>
   {/* Issue 02 */}
   <div className="grid overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl md:grid-cols-[1fr_1.2fr]">
     <div className="relative min-h-[280px]">
@@ -136,9 +188,9 @@ const CommunityPage: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-blue-950/70 to-purple-900/50" />
 
       <div className="relative z-10 flex min-h-[280px] flex-col justify-end p-8 text-white">
-        <span className="mb-4 inline-block w-fit rounded-full bg-cyan-400 px-4 py-1 text-sm font-bold text-slate-950">
-          Latest Issue
-        </span>
+   <span className="mb-4 inline-flex w-fit items-center rounded-full border border-white/30 bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
+  Previous Issue
+</span>
 
         <h2 className="text-4xl font-black">Issue 02</h2>
 
@@ -169,7 +221,7 @@ const CommunityPage: React.FC = () => {
 
       <Link
         to="/community/issue-02"
-        className="mt-8 inline-flex w-fit items-center justify-center rounded-xl bg-blue-700 px-7 py-4 font-bold text-white shadow-lg transition-colors hover:bg-blue-800"
+        className="mt-8 inline-flex w-fit items-center justify-center rounded-xl bg-purple-700 px-7 py-4 font-bold text-white shadow-lg transition-colors hover:bg-purple-800"
       >
         Read Issue 02 →
       </Link>
@@ -188,9 +240,9 @@ const CommunityPage: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-purple-900/60" />
 
       <div className="relative z-10 flex min-h-[280px] flex-col justify-end p-8 text-white">
-        <span className="mb-4 inline-block w-fit rounded-full bg-white/20 px-4 py-1 text-sm font-semibold">
-          Previous Issue
-        </span>
+<span className="mb-4 inline-flex w-fit items-center rounded-full border border-white/30 bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
+  Previous Issue
+</span>
 
         <h2 className="text-4xl font-black">Issue 01</h2>
 
