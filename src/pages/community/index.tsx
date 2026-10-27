@@ -124,7 +124,26 @@ const CommunityPage: React.FC = () => {
           </div>
 {/* Community Issues */}
 <div className="mt-14 space-y-10">
-  {/* Issue 03 */}
+  {/* Issue 04 */}
+<div className="grid overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl md:grid-cols-[1fr_1.2fr]">
+  <div className="relative min-h-[280px]">
+    <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="DSNEXT Community Issue 04" className="absolute inset-0 h-full w-full object-cover" />
+    <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-indigo-900/70 to-cyan-800/50" />
+    <div className="relative z-10 flex min-h-[280px] flex-col justify-end p-8 text-white">
+      <span className="mb-4 w-fit rounded-full bg-cyan-300 px-4 py-1.5 text-xs font-black uppercase tracking-wider text-slate-950">Latest Issue</span>
+      <h2 className="text-4xl font-black">Issue 04</h2>
+      <p className="mt-2 text-cyan-100">AI Agents, Developers & Digital Trust</p>
+      <p className="mt-4 text-sm font-semibold text-white/80">September 2026</p>
+    </div>
+  </div>
+  <div className="flex flex-col justify-center p-8 md:p-10">
+    <span className="text-sm font-bold uppercase tracking-widest text-blue-700">DSNEXT Community Bulletin</span>
+    <h2 className="mt-4 text-3xl font-black text-gray-900 md:text-4xl">Explore the September 2026 edition</h2>
+    <p className="mt-5 text-lg leading-8 text-gray-600">Meet the new generation of AI agents, discover Türkiye's AI adoption trends, explore developer tools, and learn eight practical rules for agent governance.</p>
+    <Link to="/community/issue-04" className="mt-8 inline-flex w-fit items-center justify-center rounded-xl bg-indigo-700 px-7 py-4 font-bold text-white shadow-lg hover:bg-indigo-800">Read Issue 04 →</Link>
+  </div>
+</div>
+{/* Issue 03 */}
 <div className="grid overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl md:grid-cols-[1fr_1.2fr]">
   <div className="relative min-h-[280px]">
     <img

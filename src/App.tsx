@@ -18,6 +18,7 @@ import CommunityPage from "./pages/community";
 import IssueOnePage from "./pages/community/IssueOnePage";
 import IssueTwoPage from "./pages/community/IssueTwoPage";
 import IssueThreePage from "./pages/community/IssueThreePage";
+import IssueFourPage from "./pages/community/IssueFourPage";
 import BlogPage from "./pages/blog";
 import BlogDetailPage from "./pages/blog/[slug]";
 import BulletinPage from "./pages/bulletin";
@@ -57,6 +58,7 @@ function App() {
               <Route path="/community/issue-01" element={<IssueOnePage />} />
               <Route path="/community/issue-02" element={<IssueTwoPage />} />
               <Route path="/community/issue-03" element={<IssueThreePage />} />
+              <Route path="/community/issue-04" element={<IssueFourPage />} />
 
             </Routes>
           </main>
